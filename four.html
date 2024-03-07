@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmailTemplate</title>
+  </head>
+  <body style="max-width: 500px; margin: auto">
+    <header style="display: flex">
+      <img
+        src="./assets/img/hero-faqs.png"
+        alt=""
+        style="width: 100%; max-width: 500px; margin: auto"
+      />
+    </header>
+    <main>
+      <div>
+        <div>
+          <h5>Dein Abonnement aus dem indivit-Shop</h5>
+          <p>Hallo [name],</p>
+          <p>
+            es ist wieder so weit. Wir haben an dich gedacht, vielen Dank für
+            dein Vertrauen. Alles läuft nun automatisch. Wir werden schon bald
+            unsere Mixer anwerfen und deine Abo-Bestellung frisch für dich
+            zubereiten.
+          </p>
+          <p>
+            Deine Abo-Bestellung mit der Bestellnummer [BESTELLNUMMER] umfasst
+            folgende Positionen:
+          </p>
+          <div style="display: flex; justify-content: space-between">
+            <span style="font-size: 12px; max-width: 350px">
+              [item name] x [qty]
+              <br />
+              [price] € /250ml x [qty]
+              <br />
+              ([PREIS_PRO_LITER] €/Liter)
+            </span>
+            <span>[total price] €</span>
+          </div>
+          <hr />
+          <div style="display: flex; justify-content: space-between">
+            <span style="font-size: 12px; max-width: 350px">
+              [item name] x [qty]
+              <br />
+              [price] € /250ml x [qty]
+              <br />
+              ([PREIS_PRO_LITER] €/Liter)
+            </span>
+            <span>[total price] €</span>
+          </div>
+
+          <hr />
+          <div style="display: flex; justify-content: space-between">
+            <span style="font-size: 12px; max-width: 350px">
+              Einwegpfand: [STÜCKZAHL] x 0,25€
+            </span>
+            <span>[BRUTTO-PREIS]€</span>z
+          </div>
+          <hr />
+          <div style="display: flex; justify-content: space-between">
+            <span style="font-size: 12px; max-width: 350px">
+              Express-Versand (UPS) – Lieferung am: [LIEFERDATUM] mit
+              Abstellerlaubnis: [ABSTELLORT]
+            </span>
+            <span>[BRUTTO-PREIS] €</span>
+          </div>
+          <hr />
+          <div style="display: flex; justify-content: space-between">
+            <span style="font-size: 12px; max-width: 350px">
+              [IF>0] Versand bis 12:00 Uhr mittags (UPS)
+            </span>
+            <span>[BRUTTO-PREIS] €</span>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <!-- rabatt -->
+      <div style="display: flex; justify-content: end">
+        <span style="padding-right: 30px">[IF>0] Rabatt:</span>
+        <span>[PREIS]€ </span>
+      </div>
+      <div style="display: flex; justify-content: end">
+        <span style="padding-right: 30px">MwSt. (7%):</span>
+        <span>[PREIS]€ </span>
+      </div>
+      <div style="display: flex; justify-content: end">
+        <span style="padding-right: 30px">Gesamtsumme:</span>
+        <span>[PREIS]€ </span>
+      </div>
+
+      <h4>Du hast folgende Zahlungsart gewählt: [ZAHLUNGSART]</h4>
+      <div
+        style="display: flex; max-width: 500px; justify-content: space-between"
+      >
+        <div>
+          <ul style="text-decoration: none; list-style: none; padding: 0px">
+            <li style="font-size: 24px; font-weight: 600">Lieferadresse</li>
+            <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
+            <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
+            <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
+            <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
+            <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
+            <li style="font-size: 14px">[SHIPPING EMAIL]</li>
+          </ul>
+        </div>
+        <div>
+          <ul style="text-decoration: none; list-style: none; padding: 0px">
+            <li style="font-size: 24px; font-weight: 600">Rechnungsadresse</li>
+            <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
+            <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
+            <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
+            <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
+            <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
+            <li style="font-size: 14px">[USER EMAIL]</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p>
+          Das passiert als nächstes:<br />
+          <span>
+            Sobald wir deine Smoothies hergestellt und verpackt haben, erhälst
+            du eine Benachrichtigung per E-Mail von uns. Auch deine Rechnung
+            bekommst du dann per E-Mail.
+          </span>
+        </p>
+        <p>
+          Du kannst dein Abo jederzeit in deinem Account
+          <a href="https://indivit.de/login">login</a> einsehen.
+        </p>
+        <p>
+          Bist du mit deinem Abo zufrieden? Dann würden wir uns sehr über eine
+          Bewertung bei Google
+          <a href="https://g.page/r/CScP0bps-ENOEBM/review">review</a> freuen.
+        </p>
+        <p>Mit freundlichem Gruß, <br />Deine Smoothie Ninjas</p>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <img
+        src="./assets/img/logo1.png"
+        alt=""
+        width="100"
+        style="margin: auto; display: flex"
+      />
+      <div style="text-align: center">
+        <h3>powered by Smoothie Ninja GmbH</h3>
+        <p>Dies ist eine automatisch generierte Mail an [KUNDEN E-MAIL]</p>
+        <p style="font-size: 16px">
+          Hier
+          <a href="https://indivit.de/privacy-statement">privacy-statement</a>
+          geht es zu unseren Datenschutzbestimmungen Hier
+          <a href="https://indivit.de/terms-conditions">terms-conditions</a>
+          findest du unsere AGB
+        </p>
+        <p style="font-size: 18px">
+          Smoothie Ninja GmbH, Kiefholzstr. 25, 12435 Berlin, Deutschland
+          Telefon: +49 (0)30–53010813, E-Mail: smoothie@indivit.de
+        </p>
+        <p style="font-size: 18px">
+          AG Charlottenburg HRB 241307, Geschäftsführung: Dr. Jan Lampe USt.
+          -IdNr. DE353116846
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
