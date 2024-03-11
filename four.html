@@ -30,7 +30,7 @@
           </p>
 
           <table style="width: 100%; border-collapse: collapse">
-            <tr style="border-bottom: 1px solid black">
+            <tr style="border-bottom: 1px solid #00000036">
               <td style="padding: 10px 0 10px 0">
                 <span style="font-size: 12px; max-width: 350px">
                   [item name] x [qty]
@@ -44,7 +44,7 @@
                 <span>[total price] €</span>
               </td>
             </tr>
-            <tr style="border-bottom: 1px solid black">
+            <tr style="border-bottom: 1px solid #00000036">
               <td style="padding: 10px 0 10px 0">
                 <span style="font-size: 12px; max-width: 350px">
                   [item name] x [qty]
@@ -59,7 +59,7 @@
               </td>
             </tr>
 
-            <tr style="border-bottom: 1px solid black">
+            <tr style="border-bottom: 1px solid #00000036">
               <td style="padding: 10px 0 10px 0">
                 <span style="font-size: 12px; max-width: 350px">
                   Einwegpfand: [STÜCKZAHL] x 0,25€
@@ -70,7 +70,7 @@
               </td>
             </tr>
 
-            <tr style="border-bottom: 1px solid black">
+            <tr style="border-bottom: 1px solid #00000036">
               <td style="padding: 10px 0 10px 0">
                 <span style="font-size: 12px; max-width: 350px">
                   Express-Versand (UPS) – Lieferung am: [LIEFERDATUM] mit
@@ -81,7 +81,7 @@
                 <span>[BRUTTO-PREIS] €</span>
               </td>
             </tr>
-            <tr style="border-bottom: 1px solid black">
+            <tr style="border-bottom: 1px solid #00000036">
               <td style="padding: 10px 0 10px 0">
                 <span style="font-size: 12px; max-width: 350px">
                   [IF>0] Versand bis 12:00 Uhr mittags (UPS)
@@ -93,11 +93,11 @@
             </tr>
             <tr>
               <td style="width: 50%"></td>
-              <td style="padding: 10px 0 10px 0">
+              <td >
                 <table style="width: 100%">
                   <tr>
-                    <td style="padding: 10px 0 10px 0">
-                      <span style="padding-right: 30px">[IF>0] Rabatt:</span>
+                    <td >
+                      <span >[IF>0] Rabatt:</span>
                     </td>
                     <td style="text-align: end">
                       <span>[PREIS]€ </span>
@@ -109,11 +109,11 @@
 
             <tr>
               <td style="width: 50%"></td>
-              <td style="padding: 10px 0 10px 0">
+              <td >
                 <table style="width: 100%">
                   <tr>
-                    <td style="padding: 10px 0 10px 0">
-                      <span style="padding-right: 30px">MwSt. (7%):</span>
+                    <td >
+                      <span >MwSt. (7%):</span>
                     </td>
                     <td style="text-align: end">
                       <span>[PREIS]€ </span>
@@ -124,11 +124,11 @@
             </tr>
             <tr>
               <td style="width: 50%"></td>
-              <td style="padding: 10px 0 10px 0">
+              <td >
                 <table style="width: 100%">
                   <tr>
-                    <td style="padding: 10px 0 10px 0">
-                      <span style="padding-right: 30px">Gesamtsumme:</span>
+                    <td ">
+                      <span >Gesamtsumme:</span>
                     </td>
                     <td style="text-align: end">
                       <span>[PREIS]€ </span>
@@ -143,32 +143,34 @@
       <!-- rabatt -->
 
       <h4>Du hast folgende Zahlungsart gewählt: [ZAHLUNGSART]</h4>
-      <div
-        style="display: flex; max-width: 500px; justify-content: space-between"
-      >
-        <div>
-          <ul style="text-decoration: none; list-style: none; padding: 0px">
-            <li style="font-size: 24px; font-weight: 600">Lieferadresse</li>
-            <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
-            <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
-            <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
-            <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
-            <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
-            <li style="font-size: 14px">[SHIPPING EMAIL]</li>
-          </ul>
-        </div>
-        <div>
-          <ul style="text-decoration: none; list-style: none; padding: 0px">
-            <li style="font-size: 24px; font-weight: 600">Rechnungsadresse</li>
-            <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
-            <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
-            <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
-            <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
-            <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
-            <li style="font-size: 14px">[USER EMAIL]</li>
-          </ul>
-        </div>
-      </div>
+      <table id="customers" style=" border-collapse: collapse; width: 100%;">
+        <tr>
+          <td style="padding: 0px 0px 10px 0px;">
+            <ul style="text-decoration: none; list-style: none; padding: 0px">
+              <li style="font-size: 24px; font-weight: 600">Lieferadresse</li>
+              <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
+              <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
+              <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
+              <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
+              <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
+              <li style="font-size: 14px">[SHIPPING EMAIL]</li>
+            </ul>
+  
+          </td>
+          <td style="padding: 0px 0px 10px 0px;">
+            <ul style="text-decoration: none; list-style: none; padding: 0px">
+              <li style="font-size: 24px; font-weight: 600">Rechnungsadresse</li>
+              <li style="font-size: 14px">[KUNDEN-FIRMA]</li>
+              <li style="font-size: 14px">[KUNDEN-VOR-/NACHNAME]</li>
+              <li style="font-size: 14px">[KUNDEN-STRAßE UND HAUSNR.]</li>
+              <li style="font-size: 14px">[KUNDEN-OPTIONALES FELD]</li>
+              <li style="font-size: 14px">[KUNDEN-PLZ UND ORT]</li>
+              <li style="font-size: 14px">[USER EMAIL]</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+  
       <div>
         <p>
           Das passiert als nächstes:<br />
