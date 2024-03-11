@@ -28,66 +28,119 @@
             Deine Abo-Bestellung mit der Bestellnummer [BESTELLNUMMER] umfasst
             folgende Positionen:
           </p>
-          <div style="display: flex; justify-content: space-between">
-            <span style="font-size: 12px; max-width: 350px">
-              [item name] x [qty]
-              <br />
-              [price] € /250ml x [qty]
-              <br />
-              ([PREIS_PRO_LITER] €/Liter)
-            </span>
-            <span>[total price] €</span>
-          </div>
-          <hr />
-          <div style="display: flex; justify-content: space-between">
-            <span style="font-size: 12px; max-width: 350px">
-              [item name] x [qty]
-              <br />
-              [price] € /250ml x [qty]
-              <br />
-              ([PREIS_PRO_LITER] €/Liter)
-            </span>
-            <span>[total price] €</span>
-          </div>
 
-          <hr />
-          <div style="display: flex; justify-content: space-between">
-            <span style="font-size: 12px; max-width: 350px">
-              Einwegpfand: [STÜCKZAHL] x 0,25€
-            </span>
-            <span>[BRUTTO-PREIS]€</span>z
-          </div>
-          <hr />
-          <div style="display: flex; justify-content: space-between">
-            <span style="font-size: 12px; max-width: 350px">
-              Express-Versand (UPS) – Lieferung am: [LIEFERDATUM] mit
-              Abstellerlaubnis: [ABSTELLORT]
-            </span>
-            <span>[BRUTTO-PREIS] €</span>
-          </div>
-          <hr />
-          <div style="display: flex; justify-content: space-between">
-            <span style="font-size: 12px; max-width: 350px">
-              [IF>0] Versand bis 12:00 Uhr mittags (UPS)
-            </span>
-            <span>[BRUTTO-PREIS] €</span>
-          </div>
-          <hr />
+          <table style="width: 100%; border-collapse: collapse">
+            <tr style="border-bottom: 1px solid black">
+              <td style="padding: 10px 0 10px 0">
+                <span style="font-size: 12px; max-width: 350px">
+                  [item name] x [qty]
+                  <br />
+                  [price] € /250ml x [qty]
+                  <br />
+                  ([PREIS_PRO_LITER] €/Liter)
+                </span>
+              </td>
+              <td style="text-align: end">
+                <span>[total price] €</span>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid black">
+              <td style="padding: 10px 0 10px 0">
+                <span style="font-size: 12px; max-width: 350px">
+                  [item name] x [qty]
+                  <br />
+                  [price] € /250ml x [qty]
+                  <br />
+                  ([PREIS_PRO_LITER] €/Liter)
+                </span>
+              </td>
+              <td style="text-align: end">
+                <span>[total price] €</span>
+              </td>
+            </tr>
+
+            <tr style="border-bottom: 1px solid black">
+              <td style="padding: 10px 0 10px 0">
+                <span style="font-size: 12px; max-width: 350px">
+                  Einwegpfand: [STÜCKZAHL] x 0,25€
+                </span>
+              </td>
+              <td style="text-align: end">
+                <span>[BRUTTO-PREIS]€</span>
+              </td>
+            </tr>
+
+            <tr style="border-bottom: 1px solid black">
+              <td style="padding: 10px 0 10px 0">
+                <span style="font-size: 12px; max-width: 350px">
+                  Express-Versand (UPS) – Lieferung am: [LIEFERDATUM] mit
+                  Abstellerlaubnis: [ABSTELLORT]
+                </span>
+              </td>
+              <td style="text-align: end">
+                <span>[BRUTTO-PREIS] €</span>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid black">
+              <td style="padding: 10px 0 10px 0">
+                <span style="font-size: 12px; max-width: 350px">
+                  [IF>0] Versand bis 12:00 Uhr mittags (UPS)
+                </span>
+              </td>
+              <td style="text-align: end">
+                <span>[BRUTTO-PREIS] €</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%"></td>
+              <td style="padding: 10px 0 10px 0">
+                <table style="width: 100%">
+                  <tr>
+                    <td style="padding: 10px 0 10px 0">
+                      <span style="padding-right: 30px">[IF>0] Rabatt:</span>
+                    </td>
+                    <td style="text-align: end">
+                      <span>[PREIS]€ </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="width: 50%"></td>
+              <td style="padding: 10px 0 10px 0">
+                <table style="width: 100%">
+                  <tr>
+                    <td style="padding: 10px 0 10px 0">
+                      <span style="padding-right: 30px">MwSt. (7%):</span>
+                    </td>
+                    <td style="text-align: end">
+                      <span>[PREIS]€ </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%"></td>
+              <td style="padding: 10px 0 10px 0">
+                <table style="width: 100%">
+                  <tr>
+                    <td style="padding: 10px 0 10px 0">
+                      <span style="padding-right: 30px">Gesamtsumme:</span>
+                    </td>
+                    <td style="text-align: end">
+                      <span>[PREIS]€ </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
       <!-- rabatt -->
-      <div style="display: flex; justify-content: end">
-        <span style="padding-right: 30px">[IF>0] Rabatt:</span>
-        <span>[PREIS]€ </span>
-      </div>
-      <div style="display: flex; justify-content: end">
-        <span style="padding-right: 30px">MwSt. (7%):</span>
-        <span>[PREIS]€ </span>
-      </div>
-      <div style="display: flex; justify-content: end">
-        <span style="padding-right: 30px">Gesamtsumme:</span>
-        <span>[PREIS]€ </span>
-      </div>
 
       <h4>Du hast folgende Zahlungsart gewählt: [ZAHLUNGSART]</h4>
       <div
